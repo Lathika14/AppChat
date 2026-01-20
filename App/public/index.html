@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Private Chat</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <div id="app">
+        <!-- Login Screen -->
+        <div id="login-screen" class="screen active-screen">
+            <div class="login-card glass-panel">
+                <div class="logo-area">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                </div>
+                <h1>Private Chat</h1>
+                <p>End-to-end encrypted feel. Simple. Fast.</p>
+                <div class="input-group">
+                    <input type="text" id="username-input" placeholder="Type your name..." autocomplete="off">
+                </div>
+                <button id="join-btn" class="primary-btn">Start Messaging</button>
+            </div>
+        </div>
+
+        <!-- Chat Screen -->
+        <div id="chat-screen" class="screen">
+            <header class="chat-header glass-panel">
+                <div class="header-left">
+                    <div class="avatar" id="header-avatar">?</div>
+                    <div class="header-info">
+                        <h2 id="header-username">Chat Room</h2>
+                        <span class="connection-status">Online</span>
+                    </div>
+                </div>
+            </header>
+            
+            <main id="chat-history">
+                <div class="system-message">Welcome to the secure channel. Content is not persisted permanently appropriately (in this demo).</div>
+            </main>
+
+            <footer class="chat-footer glass-panel">
+                <div class="input-wrapper">
+                    <input type="text" id="message-input" placeholder="Type a message..." autocomplete="off">
+                    <button id="send-btn" class="icon-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                    </button>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
